@@ -1,0 +1,36 @@
+Project Description:
+We are setting out to make a space shooter, in the vein of asteroids
+
+Learning Objectives:
+	Intro to file mgmt
+	Intro to game scripting
+	Intro to GUI elements
+	Intro to Input
+	Intro to Events
+	Intro to Scene Loading
+
+Production Time:
+	Setup 10 minutes
+	Assets 45 minutes
+	Player 30 minutes
+	Enemy 20 minutes
+	Menus 40 minutes
+	GUI 30 minutes
+	Build 10 minutes
+	Review 10 minutes
+
+High Concept:
+	A space shooter where the player must avoid asteroids that try to destrou their ship. Score as many points as you can by shooting the asteroids in a given amount of time.
+
+Controls:
+	Arrow keys to move ship left, right, up, down
+	Space bar to shoot
+	C create a temporary shield
+
+Mockup Assets:
+	Player Ship
+	asteroid
+	Bullet
+	Shield
+	Blocks
+	Explosion
