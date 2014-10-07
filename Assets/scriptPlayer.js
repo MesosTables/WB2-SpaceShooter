@@ -10,6 +10,7 @@ var socketProjectile:Transform;
 var lives : int = 3;
 var jetParticle : Transform;
 var jetSocket : Transform;
+var jetSocket2 : Transform;
 
 
 //Private Variables
@@ -40,7 +41,7 @@ function Update ()
 	
 	//set the boundaries of the playable field (bounding box) for the x/z field
 	//set vertical limits
-	transform.position.x = Mathf.Clamp(transform.position.x,-10,10);
+	transform.position.x = Mathf.Clamp(transform.position.x,-11,11);
 	//set horizontal limits
 	transform.position.z = Mathf.Clamp(transform.position.z, -15,15);
 	
@@ -52,7 +53,15 @@ function Update ()
 	if(Input.GetButton("FwdUp"))
 	{
 		
-		Instantiate(jetParticle, jetSocket.position, jetSocket.rotation);
+		var newJet1 = Instantiate(jetParticle, jetSocket.position, jetSocket.rotation);
+		Destroy(GameObject.FindWithTag("jet"),.1);
+	}
+	
+	if(Input.GetButton("Dwn"))
+	{
+		
+		var newJet2 = Instantiate(jetParticle, jetSocket2.position, jetSocket2.rotation);
+		Destroy(GameObject.FindWithTag("jet"),.1);
 	}
 	
 	//long way of movement for the player
