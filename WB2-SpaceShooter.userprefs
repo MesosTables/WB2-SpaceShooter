@@ -2,16 +2,17 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scriptPlayer.js">
     <Files>
-      <File FileName="Assets\scriptBullet.js" Line="1" Column="1" />
+      <File FileName="Assets\scriptPlayer.js" Line="35" Column="32" />
+      <File FileName="Assets\scriptBullet.js" Line="11" Column="29" />
       <File FileName="Assets\scriptScreenMainMenu.js" Line="1" Column="1" />
       <File FileName="WB2-SpaceShooter.sln" Line="40" Column="1" />
-      <File FileName="Assets\scriptPlayer.js" Line="16" Column="1" />
-      <File FileName="Assets\scriptAsteroid.js" Line="50" Column="83" />
-      <File FileName="Assets\scriptManager.js" Line="1" Column="1" />
+      <File FileName="Assets\scriptAsteroid.js" Line="53" Column="15" />
+      <File FileName="Assets\scriptManager.js" Line="17" Column="15" />
       <File FileName="Assets\scriptScreenLoad.js" Line="1" Column="1" />
-      <File FileName="Assets\scriptScreenCredits.js" Line="1" Column="1" />
+      <File FileName="Assets\scriptScreenCredits.js" Line="16" Column="41" />
       <File FileName="Assets\scriptScreenLose.js" Line="1" Column="1" />
       <File FileName="Assets\scriptScreenWin.js" Line="1" Column="1" />
+      <File FileName="Assets\scriptShield.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -11,10 +11,13 @@ var lives : int = 3;
 var jetParticle : Transform;
 var jetSocket : Transform;
 var jetSocket2 : Transform;
-
+var numberOfShields : int = 4;
+var shieldMesh : Transform;
+var shieldButton : KeyCode;
+var shootFX: AudioClip;
 
 //Private Variables
-
+var shieldOn : boolean = false;
 
 //game loop
 function Update () 
@@ -48,22 +51,38 @@ function Update ()
 	if(Input.GetKeyDown("space"))
 	{
 		Instantiate(projectile, socketProjectile.position, socketProjectile.rotation);
+		audio.clip = shootFX;
+		audio.Play();
 	}
 	
 	if(Input.GetButton("FwdUp"))
 	{
 		
 		var newJet1 = Instantiate(jetParticle, jetSocket.position, jetSocket.rotation);
-		Destroy(GameObject.FindWithTag("jet"),.1);
 	}
 	
 	if(Input.GetButton("Dwn"))
 	{
 		
 		var newJet2 = Instantiate(jetParticle, jetSocket2.position, jetSocket2.rotation);
-		Destroy(GameObject.FindWithTag("jet"),.1);
 	}
 	
+	//create shield if e is pressed
+	if(Input.GetKeyDown(shieldButton))
+	{
+		if(!shieldOn)
+		{
+			var clone = Instantiate(shieldMesh, transform.position, transform.rotation);
+			clone.transform.parent = gameObject.transform;
+			shieldOn = true;
+		}
+		
+	}
+	
+	if (GameObject.FindWithTag("jet"))
+	{
+		Destroy(GameObject.FindWithTag("jet"),.01);
+	}
 	//long way of movement for the player
 	/*
 	if(Input.GetKey("up"))

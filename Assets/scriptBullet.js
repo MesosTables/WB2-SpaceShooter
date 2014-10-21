@@ -7,6 +7,8 @@ var bulletSpeed : float =15;
 var explosion : Transform;
 //in order to get scoring script
 var sceneManager : GameObject;
+
+var explosionSound : AudioClip;
 //Private Variables
 
 //game loop
@@ -43,6 +45,7 @@ function OnTriggerEnter(other : Collider)
 	{
 		//call the reset asteroid function from the Asteroid script
 		other.GetComponent("scriptAsteroid").ResetEnemy();
+		audio.PlayClipAtPoint(explosionSound, transform.position);
 		
 		// create explosion when impact of bullet
 		if (explosion)

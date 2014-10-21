@@ -14,6 +14,7 @@ function Start()
 	InvokeRepeating("Countdown", 1.0, 1.0);
 	lives = 3;
 	score = 0;
+	audio.Play();
 }
 
 //hold information on the overall scene

@@ -7,6 +7,9 @@ var asteroidSpeed : float = 6.0;
 var explosionA : Transform;
 
 var sceneManager : GameObject;
+
+var shieldSoundFX : AudioClip;
+var playerDamageFX: AudioClip;
 //Private Variables
 
 
@@ -46,8 +49,22 @@ function OnTriggerEnter (other : Collider)
 		
 		if (explosionA)
 		{
+			audio.clip = playerDamageFX;
+			audio.Play();
 			//create a new explosion particle effect transform upon instantiate so we can destroy it
 			var newExplosion = Instantiate(explosionA,transform.position,transform.rotation); 
+			Destroy(GameObject.FindWithTag("explosion"),.5); //remove explosion particle effect
+			ResetEnemy();// call the function to place the enemy
+		}
+	}
+	if(other.gameObject.tag=="shield")
+	{
+		if (explosionA)
+		{
+			audio.clip = shieldSoundFX;
+			audio.Play();
+			//create a new explosion particle effect transform upon instantiate so we can destroy it
+			var shieldExplosion = Instantiate(explosionA,transform.position,transform.rotation); 
 			Destroy(GameObject.FindWithTag("explosion"),.5); //remove explosion particle effect
 			ResetEnemy();// call the function to place the enemy
 		}
